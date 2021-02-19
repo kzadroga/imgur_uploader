@@ -12,7 +12,7 @@ file_name=$(get_abs_filename $file)
 if [ $# -ne 2 ]; then
 	echo "You have to pass two arguments"
 else
-	if [[ $file == *.jpg || $file == *.png || $file == *.tiff ]]; then
+	if [[ $file == *.jp*g || $file == *.*png || $file == *.tiff || $file == *.gif ]]; then
 		link=$(curl --request POST --url https://api.imgur.com/3/image \
 		--header 'authorization: Client-ID '$client_id'' \
 		--header 'content-type: multipart/form-data;' \
